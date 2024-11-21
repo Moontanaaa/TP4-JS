@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinémas proches</title>
+    <script src="js/geolocation.js" type="module"></script>
+    <script src="js/addressApi.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <h1>Cinéma proches de chez vous</h1>
+    <form id="search-form">
+        <button type="button" id="geolocate-btn">Me géolocaliser</button>
+        
+        <label for="address">Chercher des cinémas proches d'une adresse</label>
+        <input type="search" id="address" placeholder="L'adresse recherchée">
+
+        <label for="distance">Distance en km</label>
+        <input type="range" id="distance" value="10" min="1" max="50">
+        <span id="distance-value">10 km</span>
+
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <ul id="cinema-list"></ul>
+
+</body>
+</html>
